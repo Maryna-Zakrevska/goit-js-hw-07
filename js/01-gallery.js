@@ -35,7 +35,8 @@ function onGalleryContainerClick(event) {event.preventDefault();
   const modal = basicLightbox.create(`<img src="${imageUrl}" alt="${event.target.alt}">`);
   modal.show(); 
   document.addEventListener('keydown', onEscapeCloseModal); 
-  function onEscapeCloseModal(event) {if (event.code === "Escape") {modal.close()}}};
+  function onEscapeCloseModal(event) {if (event.code === "Escape") {modal.close(); 
+  document.removeEventListener('keydown', onEscapeCloseModal)}}};
 
 
 
